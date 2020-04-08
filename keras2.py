@@ -96,7 +96,7 @@ validation_steps = X_validation.shape[0]//BATCH_SIZE
 #from time import time
 
 #tensorboard = TensorBoard(log_dir="logs/{}".format(time()))
-for i in range(1):
+for i in range(100):
   start = time.time()
   model.fit(train_generator, steps_per_epoch=steps_per_epoch, epochs=EPOCHS, 
                     validation_data=validation_generator, validation_steps=validation_steps, 
@@ -104,7 +104,7 @@ for i in range(1):
   end = time.time()
   print(f'{end-start:.6f}')
 
-for i in range(101):  
+for i in range(100):  
   start = time.time()
   score = model.evaluate(test['features'], tf.keras.utils.to_categorical(test['labels']))
   end = time.time()
