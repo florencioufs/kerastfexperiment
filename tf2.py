@@ -184,7 +184,7 @@ with tf.compat.v1.Session() as session:
     
     print("Training LeNet...")
     print()
-    for i in range(1):
+    for i in range(100):
       start = time.time()
       for i in range(EPOCHS):
           X_train, y_train = shuffle(train['features'], train['labels'])
@@ -213,7 +213,7 @@ Evaluate the performance of the model on the test set
 with tf.compat.v1.Session() as session:
     saver.restore(session, tf.train.latest_checkpoint('.'))
     
-    for i in range(101):
+    for i in range(100):
       start = time.time()
       test_accuracy = evaluate(test['features'], test['labels'])
       end = time.time()
