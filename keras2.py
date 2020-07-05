@@ -1,3 +1,7 @@
+#Este código é uma modificação do código desenvolvidos por Gazar (2018). Disponível em: https://medium.com/@mgazar/lenet-5-in-9-lines-of-code-using-keras-ac99294c8086
+
+
+
 from requests import get
 
 def download_file(url, file_name):
